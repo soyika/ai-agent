@@ -1,0 +1,14 @@
+{
+  "name": "kiwi-iot-gateway",
+  "version": "1.0.0",
+  "description": "物联网设备网关服务",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "dependencies": {
+    "mqtt": "^5.10.1",
+    "axios": "^1.7.7"
+  }
+}

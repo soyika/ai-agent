@@ -1,0 +1,13 @@
+name: kiwi-ai-platform
+version: 1.0.0
+description: >
+  猕猴桃智慧种植与产销一体化 AI Agent 平台
+  Kiwifruit Smart Planting & Production-Sales Integration AI Agent Platform
+authors:
+  - AI Agent Team
+
+# 核心依赖说明
+# 后端: Python 3.11+ (FastAPI)
+# AI 层: LangChain + Ollama/OpenAI/Claude
+# 数据库: PostgreSQL + InfluxDB + Milvus/Chroma
+# 前端: Vue 3 + ECharts + Element Plus
