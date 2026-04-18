@@ -54,6 +54,18 @@ class LLMClient:
                 max_tokens=settings.LLM_MAX_TOKENS,
                 streaming=False,
             )
+        elif provider == "dashscope":
+            from langchain_openai import ChatOpenAI
+            from app.core.config import settings
+
+            self._client = ChatOpenAI(
+                model=settings.DASHSCOPE_MODEL,
+                base_url=settings.DASHSCOPE_BASE_URL,
+                api_key=settings.DASHSCOPE_API_KEY,
+                temperature=settings.LLM_TEMPERATURE,
+                max_tokens=settings.LLM_MAX_TOKENS,
+                streaming=False,
+            )
         elif provider == "anthropic":
             from langchain_anthropic import ChatAnthropic
             from app.core.config import settings

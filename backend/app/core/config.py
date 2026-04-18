@@ -12,11 +12,14 @@ class Settings(BaseSettings):
     API_PREFIX: str = "/api/v1"
 
     # --- 大模型配置 ---
-    LLM_PROVIDER: Literal["ollama", "openai", "anthropic"] = "ollama"
-    LLM_MODEL: str = "qwen2.5:7b"
-    LLM_BASE_URL: str = "http://localhost:11434"
+    LLM_PROVIDER: Literal["dashscope", "openai", "anthropic", "ollama"] = "dashscope"
     LLM_TEMPERATURE: float = 0.7
     LLM_MAX_TOKENS: int = 4096
+
+    # 阿里百炼 DashScope (默认推荐)
+    DASHSCOPE_API_KEY: Optional[str] = None
+    DASHSCOPE_BASE_URL: str = "https://dashscope.aliyuncs.com/compatible-mode/v1"
+    DASHSCOPE_MODEL: str = "qwen-plus"
 
     # OpenAI (可选)
     OPENAI_API_KEY: Optional[str] = None
@@ -27,9 +30,9 @@ class Settings(BaseSettings):
     ANTHROPIC_API_KEY: Optional[str] = None
     ANTHROPIC_MODEL: Optional[str] = "claude-3-5-sonnet-20241022"
 
-    # Ollama (本地部署推荐)
-    OLLAMA_BASE_URL: str = "http://localhost:11434"
-    OLLAMA_MODEL: str = "qwen2.5:7b"
+    # Ollama (本地部署可选)
+    OLLAMA_BASE_URL: Optional[str] = "http://localhost:11434"
+    OLLAMA_MODEL: Optional[str] = "qwen2.5:7b"
 
     # --- 数据库配置 ---
     POSTGRES_HOST: str = "localhost"
