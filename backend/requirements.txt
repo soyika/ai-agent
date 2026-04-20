@@ -28,10 +28,10 @@ numpy==1.26.4
 pandas==2.2.3
 
 # Image Processing (Pest/Disease Detection)
-opencv-python==4.10.0
+opencv-python==4.10.0.84
 Pillow==10.4.0
-torch==2.5.0
-torchvision==0.20.0
+# torch==2.5.0
+# torchvision==0.20.0
 
 # Utilities
 python-jose[cryptography]==3.3.0
