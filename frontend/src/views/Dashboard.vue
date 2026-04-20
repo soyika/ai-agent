@@ -66,7 +66,6 @@
 
 <script setup lang="ts">
 import { ref, onMounted } from 'vue'
-import { Sunny, Watermelon, Cpu, Bell } from '@element-plus/icons-vue'
 import * as echarts from 'echarts'
 
 const chartRef = ref<HTMLElement | null>(null)
